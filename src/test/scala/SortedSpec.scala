@@ -1,6 +1,4 @@
-import org.junit.runner.RunWith
 import org.specs2.mutable.Specification
-import org.specs2.runner.JUnitRunner
 import scala.concurrent.Await
 
 
@@ -8,7 +6,6 @@ import scala.concurrent.Await
  * Denis Anfertev
  * 10/21/13 6:08 PM
  */
-@RunWith(classOf[JUnitRunner])
 class SortedSpec extends Specification {
 
   import scala.concurrent.duration._

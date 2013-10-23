@@ -9,8 +9,7 @@ object AppBuild extends Build {
       version := "0.1-SNAPSHOT",
       scalaVersion := "2.10.2",
       libraryDependencies ++= Seq(
-        "org.specs2" %% "specs2" % "2.2.3" % "test",
-        "junit" % "junit" % "4.11" % "test"
+        "org.specs2" %% "specs2" % "2.2.3" % "test"
       )
     )
   )

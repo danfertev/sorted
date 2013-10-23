@@ -20,11 +20,13 @@ object Sorted {
 
     def isSliceSorted(ix: Index) = {
       val (start, end) = ix
-      val n = end - start
-
-      def step(k: Int): Boolean = (k == 0) || (ord(xs(k + start - 1), xs(k + start)) && step(k - 1))
-
-      (n < 2) || step(n + 1)
+      var res = true
+      var i = start
+      while (i <= end  && res) {
+        if (!ord(xs(i), xs(i + 1))) res = false
+        i += 1
+      }
+      res
     }
 
     def par(indexes: Array[Index]): Array[Future[Boolean]] = {
